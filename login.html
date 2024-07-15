@@ -1,0 +1,58 @@
+<!DOCTYPE html>                                      
+ 
+<html>
+<head>
+    <link rel="stylesheet" href="home.css">
+<style>
+.center{
+margin: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+}
+</style>
+<script>
+function validateform(){
+var pd=document.myform.pd.value;
+var x=document.myform.mail.value;
+var atposition=x.indexOf("@");
+var dotposition=x.lastIndexOf(".");
+if (atposition&lt;1 || dotposition&lt;atposition+2 || dotposition+2&gt;=x.length){
+alert("Please enter a valid e-mail address");
+return false;
+}
+else if(pd.length<8 ){
+alert("Enter correct password it should contain atleast 8 characters");
+return false;
+}
+}
+</script>
+</head>
+<body style="background-color: pink;background-repeat: no-
+repeat;background-size: cover;color:aliceblue;font-size: larger;" background="bbg.avif">
+ <header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about1.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="#contact">Application Form</a></li>
+        </ul>
+    </nav>
+</header>
+<form name="myform" method="post" onsubmit="return validateform()"> 
+<div class="center">
+<label for="mail"><b>Email id:</b></label>
+<input type="text" id="mail" name="mail"><br><br>
+<b>Password:</b> <input type="password" name="pd"><br><br>
+<!-- <a href="categories.html">-->
+
+<center><button><b>Submit</b></button></center>
+</form>
+</a>
+</div>
+</body>
+</html>
+
